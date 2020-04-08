@@ -9,7 +9,8 @@ database = "ardit700_pm1database"
 
 cursor = connection.cursor()
 
-word = raw_input("Enter a word: ")
+w = raw_input("Enter a word: ")
+word = w.lower()
 
 query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = '%s' " % word)
 results = cursor.fetchall()
